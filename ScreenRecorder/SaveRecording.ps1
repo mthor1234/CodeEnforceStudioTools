@@ -4,7 +4,7 @@ $Path = $PSScriptRoot + "\Recordings\$Date"
 
 if (!(Test-Path $Path -PathType Container)) {
     Write-Host("Creating $Path...")
-    New-Item -ItemType Directory -Force -Path $Path
+    New-Item -ItemType Directory -Force -Path $Path | Out-Null
 }
 
 Write-Host("Saving...")
