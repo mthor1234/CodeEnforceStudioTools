@@ -12,3 +12,8 @@ Write-Host("Saving...")
 #Sleep to allow for video to process before pulling
 Start-Sleep -m 1050
 adb pull /sdcard/Tandem_Recording.mp4 $Path\$fileName.mp4
+
+#Export Logcat
+$ScriptToRun= $PSScriptRoot+"\LogcatExport.ps1"
+
+& $ScriptToRun
